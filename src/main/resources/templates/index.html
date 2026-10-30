@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cynbit Technologies | AI Systems & Platform Engineering</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <div class="logo-badge">C</div>
+            <span>Cynbit Technologies</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#services">Services</a></li>
+            <li><a href="#solutions">AI Automation</a></li>
+            <li><a href="#labs">Engineering Labs</a></li>
+            <li><a href="#careers">Careers</a></li>
+        </ul>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="badge">Assessment Prototype &bull; Interactive Discovery</div>
+            <h1>Architecting Scalable Platforms & <span class="highlight">AI Systems</span></h1>
+            <p>We build production-ready AI automation, custom workflow agents, and high-performance digital platforms for fast-moving enterprises.</p>
+        </section>
+
+        <section class="services-grid" id="services">
+            <div class="card">
+                <h3>AI Automation Systems</h3>
+                <p>Multi-agent orchestration, proprietary enterprise RAG pipelines, and automated workflow integrations.</p>
+            </div>
+            <div class="card">
+                <h3>Platform Engineering</h3>
+                <p>Distributed microservices, resilient APIs, and enterprise cloud architectures built for speed and uptime.</p>
+            </div>
+            <div class="card">
+                <h3>Engineering Labs</h3>
+                <p>Dedicated technology pods executing rapid MVPs and full-cycle digital transformation.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Floating Chat Widget -->
+    <button class="chat-launcher" id="chatLauncher">&sparkles; Ask Cynbit AI</button>
+
+    <div class="chat-modal hidden" id="chatModal">
+        <div class="chat-header">
+            <div>
+                <div class="chat-title">Cynbit Discovery Assistant</div>
+                <div class="chat-subtitle">Online &bull; Instant Response</div>
+            </div>
+            <button class="close-btn" id="closeChat">&times;</button>
+        </div>
+        <div class="chat-body" id="chatBody">
+            <div class="msg msg-bot">
+                Hello! Welcome to Cynbit. Are you looking for AI Automation solutions, Platform Engineering, or a project quote?
+            </div>
+            <div class="chips">
+                <span class="chip" onclick="document.getElementById('chatInput').value='AI Automation'; document.getElementById('sendBtn').click();">AI Automation</span>
+                <span class="chip" onclick="document.getElementById('chatInput').value='Platform Engineering'; document.getElementById('sendBtn').click();">Platform Engineering</span>
+                <span class="chip" onclick="document.getElementById('chatInput').value='Request a Quote'; document.getElementById('sendBtn').click();">Request a Quote</span>
+            </div>
+        </div>
+        <div class="chat-footer">
+            <input type="text" id="chatInput" placeholder="Type your requirements..." autocomplete="off">
+            <button id="sendBtn">Send</button>
+        </div>
+    </div>
+
+    <script th:src="@{/js/app.js}"></script>
+</body>
+</html>
